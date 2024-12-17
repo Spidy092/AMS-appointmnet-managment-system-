@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+  --blue: #3d5ed8;
+  --dark-blue: #051f7e;
+  --white: #fff;
+  --gray: #261c1c;
+  --black1: #222;
+  --black2: #999;
+  --success-green:#2bcf2b;
+  --success-green-hover:#169e16;
+  --cancle-red:#e63505;
+  --edit-yellow:#FFDB58;
+}
+
+* { font-family: "Montserrat", sans-serif; margin: 0; padding: 0; box-sizing: border-box;}
+
+/* reset css */
+*,:after,:before{box-sizing: border-box;padding: 0;margin: 0;border: none;outline: none;}
+img{max-width: 100%;}
+ul,li{list-style: none;margin: 0;}
+a{text-decoration: none !important;display: inline-block;color: #383838;font-size: 16px;cursor: pointer;}
+select,input,textarea,button{width: 100%;border: none;outline: none; background: transparent;cursor: pointer;font-size: 16px;}
+select:focus,input:focus,textarea:focus,button:focus{border: none;outline: none;}
+input::placeholder, textarea::placeholder {opacity: 1;color: #626262;}
+textarea{resize: none;}
+p {color: #3a3a3a;font-size: 18px;margin: 15px 0;text-align: justify;line-height: 1.6;}
+.textl{text-align: left;}
+.textc{text-align: center;}
+.textr{text-align: right;}
+/* reset css */
+
+/* common css */
+.wrapper{width: 100%;overflow: hidden;}
+.fluid-container{width: 100%;max-width: 1280px;margin: 0 auto;padding: 0 20px;}
+/* common css */
+
+body {margin: 0;padding: 0;background-size: cover;}
+.login-container {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);width: 100%; max-width: 900px;box-sizing: border-box;border: 1px solid #dadce0;-webkit-border-radius: 8px;border-radius: 8px;display: flex;align-items: center; justify-content: space-around;box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
+.login-container .logo span{display: flex ; align-items: center; justify-content: center;width: 250px;}
+.login-container .login-form {border-left: 1px solid #d9d9d9; padding: 2px;padding: 39px;}
+.login-form{width: 100%;}
+.login-form h2 { margin: 0px 0 -0.125rem; padding: 0; color: #fff; text-align: center; color: #202124; font-size: 28px; font-weight: 400; text-align: left;padding: 10px 0;color: #454548;}
+.login-form p {font-size: 16px;font-weight: 400;letter-spacing: .1px;line-height: 1.5;margin-bottom: 25px;text-align: center;}
+.login-form .inputBox {position: relative; }
+.login-form .inputBox input {padding: 0.625rem 10px;font-size: 1rem;letter-spacing: 0.062rem;background-color: #f9f9f9;border-radius: 4px;border: 1px solid #eeeeee;}
+.login-form .inputBox label {position: absolute;top: 0;left: 60px;padding: 0.625rem 0;font-size: 1rem;color: grey;pointer-events: none;transition: 0.3s;}
+.login-form .inputBox input:focus ~ label,
+.login-form .inputBox input:valid ~ label,
+.login-form .inputBox input:not([value=""]) ~ label {top: -1.125rem;left: 60px;color: var(--dark-blue);font-size: 0.75rem;background-color: #fff;height: 10px;padding-left: 5px;padding-right: 5px;}
+.login-form .inputBox input:focus {outline: none;border: 2px solid var(--blue);}
+.login-form .forgot a:hover {color:var(--dark-blue);}
+.login-form .inputBox input:focus ~ label,
+.login-form .inputBox input:valid ~ label,
+.login-form .inputBox input:not([value=""]) ~ label {top: -1.125rem;left: 60px;  color: #444;font-size: 0.75rem;background-color: #fff;height: 10px;padding-left: 5px;padding-right: 5px;}
+.login-form .inputBox input:focus {outline: none;border: 2px solid var(--blue);}
+.forgot {margin-top: -20px;}
+.forgot a { -webkit-border-radius: 4px; border-radius: 4px; color: var(--dark-blue); display: inline-block; font-weight: 500; letter-spacing: .25px; outline: 0; position: relative; background-color: transparent; cursor: pointer; font-size: inherit; padding: 0; text-align: left; border: 0; padding: 17px 50px;}
+.login-form .inputBox span:nth-child(1){display: flex; align-items: center; justify-content: center; max-width: 40px; min-width: 40px; height: 40px; background-color: #f7f7f7; border-radius: 5px; border: 1px solid #b7b7b7;}
+.login-form .inputBox span:nth-child(1) i{font-size: 20px; color: #505050;}
+.login-form .inputBox {display: flex; align-items: center; justify-content: center; gap: 10px;margin: 19px 0 30px 0; }
+.login-container .logo {padding: 50px; }
+.login-btn button{width: unset;padding: 9px 24px;background-color:var(--blue);color: #fff;border-radius: 5px;}
+.login-btn button:active{background-color: #305ffa;}
+.login-btn{text-align: right; }
+.send-mail-btn{display: flex; align-items: center; justify-content: end; gap: 20px;}
+.send-mail-btn a{ color: #616161;font-weight: 600;letter-spacing: .25px;font-size: inherit;}
+.send-mail-btn a:hover{ color:var(--dark-blue); }
+.password-eye{position: absolute; top: 0; right: 0; bottom: 0; display: flex; align-items: center ; justify-content: center; width: 35px; padding: 0 25px;cursor: pointer;  }
+.password-eye i{color: #3f5c8162;  }
+.login-form input[type="password"] {font-weight: 900;letter-spacing: 4px;}
+.inputBox #password:focus ~ ul.helper-text{visibility: visible;}
+.inputBox ul.helper-text { display: block; font-size: 12px; line-height: 22px; color: var(--cancle-red); position: absolute; background: #fff; padding: 5px 20px  5px 25px; z-index: 1; border: 1px solid #90959730; top: 46px; border-radius: 9px; visibility: hidden;  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;left: 50px;}
+.inputBox ul.helper-text li.valid { display: none;}
+.inputBox ul.helper-text li {list-style:circle}
+
+/* ========================== err msg style ====================== */
+.text-danger{position: absolute;font-size: 12px;left: 53px;color: var(--cancle-red);bottom: -17px;z-index: 2;}
+/* ========================== err msg style end ====================== */
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .login-container {flex-direction: column;padding: 20px;width: 90%;max-width: 600px;}
+  .login-container .logo { padding: 20px 0;}
+  .login-container .login-form { border-left: none; padding: 20px;}
+}
+
+@media (max-width: 768px) {
+  .login-container {padding: 10px;}
+  .login-form h2 { font-size: 24px;}
+  .login-form p {font-size: 14px;}
+  .login-form .inputBox {gap: 5px; }
+  .login-form .inputBox label {font-size: 14px;}
+  .login-form .inputBox input {font-size: 14px;padding: 8px;}
+  .login-form .forgot a {font-size: 14px;padding: 10px 20px;}
+  .login-form .inputBox input:focus ~ label,
+  .login-form .inputBox input:valid ~ label,
+  .login-form .inputBox input:not([value=""]) ~ label {top: -18px !important;left: 49px !important;}
+  .login-form .inputBox span:nth-child(1){max-width: 34px; min-width: 34px;height: 34px;}
+  .login-form .inputBox span:nth-child(1) i{font-size: 15px !important;}
+  .login-form .inputBox label{  left: 50px;}
+  .login-btn button {padding: 8px 20px;font-size: 14px;}
+}
+
+@media (max-width: 480px) {
+  .login-container {padding: 10px;}
+  .login-container .logo span {width: 150px;}
+  .login-form h2 { font-size: 20px;}
+  .login-form p { font-size: 12px;}
+  .login-form .inputBox label { font-size: 12px;}
+  .login-form .inputBox input { font-size: 12px;  padding: 6px;}
+  .login-form .forgot a { font-size: 12px;  padding: 5px 10px;}
+  .login-btn button { font-size: 12px;  padding: 6px 15px;}
+  .login-form .inputBox span:nth-child(1) { max-width: 30px;  min-width: 30px;  height: 30px;}
+  .login-form .inputBox span:nth-child(1) i { font-size: 16px;}
+  .login-form .inputBox input:focus ~ label,
+  .login-form .inputBox input:valid ~ label,
+  .login-form .inputBox input:not([value=""]) ~ label { top: -16px !important;  left: 40px !important;  font-size: 10px; }
+  .login-form .inputBox span:nth-child(1){  max-width: 29px;  min-width: 29px;  height: 29px;}
+  .login-form .inputBox label{ left: 44px;  top: -3px;}
+  .send-mail-btn a{ font-size: 10px;}
+}
